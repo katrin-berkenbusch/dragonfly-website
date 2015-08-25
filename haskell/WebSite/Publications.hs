@@ -1,26 +1,26 @@
 {-# LANGUAGE OverloadedStrings #-}
-{-# LANGUAGE TupleSections #-}
+{-# LANGUAGE TupleSections     #-}
 module WebSite.Publications (
     rules
 ) where
 
-import Control.Monad (liftM, when)
-import Data.List (sortOn)
-import Data.Monoid ((<>))
-import Data.Maybe (fromMaybe)
-import Data.Ord (Down(..))
+import           Control.Monad          (liftM, when)
+import           Data.List              (sortOn)
+import           Data.Maybe             (fromMaybe)
+import           Data.Monoid            ((<>))
+import           Data.Ord               (Down (..))
 
-import Text.CSL (readBiblioFile)
-import Text.CSL.Reference (Reference)
+import           Text.CSL               (readBiblioFile)
+import           Text.CSL.Reference     (Reference)
 
-import Hakyll
+import           Hakyll
 
-import WebSite.Config
-import WebSite.Bibliography
-import WebSite.Collection hiding (getList)
-import WebSite.Context
-import WebSite.Compilers
-import WebSite.DomUtil.Images
+import           WebSite.Bibliography
+import           WebSite.Collection     hiding (getList)
+import           WebSite.Compilers
+import           WebSite.Config
+import           WebSite.Context
+import           WebSite.DomUtil.Images
 
 cc     = CollectionConfig
        { baseName            = "publications"
@@ -46,8 +46,8 @@ rules = do
                 >>= relativizeUrls
 
     match (collectionPattern cc) $ version "full" $ do
-        compile $ do 
-            scholmdCompiler 
+        compile $ do
+            scholmdCompiler
                 >>= saveSnapshot "content"
 
     match (collectionPattern cc) $ do
@@ -75,7 +75,7 @@ getList cc limit = do
     base <- baseContext (baseName cc)
     snaps <- loadAllSnapshots (collectionPattern cc .&&. hasVersion "full") "content"
     let sortorder i = do
-        case lookupRef i bib of
+          case lookupRef i bib of
             Nothing   -> return (0,[])
             Just ref  -> do
                 let year = maybe 0 id $ refYear ref
@@ -90,4 +90,3 @@ sortItemsBy f = sortByM $ f . itemIdentifier
   where
     sortByM :: (Monad m, Ord k) => (a -> m k) -> [a] -> m [a]
     sortByM f xs = map fst . sortOn snd <$> mapM (\x -> (x,) <$> f x) xs
-

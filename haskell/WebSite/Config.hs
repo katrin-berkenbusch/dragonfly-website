@@ -3,11 +3,11 @@
 -- | This module contains values related to configuration.
 module WebSite.Config where
 
-import qualified Data.List as List
+import qualified Data.List           as List
 
-import Hakyll
+import           Hakyll
 
-import Text.Pandoc.Options (WriterOptions(..))
+import           Text.Pandoc.Options (WriterOptions (..))
 
 -- | Options for an HTML5 Pandoc writer
 htm5Writer :: WriterOptions
@@ -38,9 +38,25 @@ htm5Writer = defaultHakyllWriterOptions
 -- URL
 -- Text
 
+data LicenseDetails =
+  LicenseDetails
+  { licenseDescription :: String
+  , licenseURL         :: String
+  , licenseText        :: Maybe String
+  }
+
+licenseDictionary :: [(String, LicenseDetails)]
+licenseDictionary =
+  [("CC-BY-SA-NC",
+    LicenseDetails
+    "Creative Commons: Attribution-NonCommercial-ShareAlike 2.0 Generic"
+    "https://creativecommons.org/licenses/by-nc-sa/2.0/"
+    Nothing
+   )]
+
 -- | recognised tags
-tagDictionary :: [(String, String)] 
-tagDictionary = [("edward", "Edward Abraham"), 
+tagDictionary :: [(String, String)]
+tagDictionary = [("edward", "Edward Abraham"),
     ("katrin", "Katrin Berkenbusch"),
     ("philipp", "Philipp Neubauer"),
     ("yvan", "Yvan Richard"),

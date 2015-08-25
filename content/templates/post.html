@@ -4,6 +4,13 @@
         $if(quote)$
         <blockquote class="wide"><p>$quote$</p><cite>$quote-attribution$</cite></blockquote>
         $endif$
+        $if(bannerImageMeta)$
+        <div>
+            <p>$banner-image-license$</p>
+            <p>$banner-image-url$</p>
+            <p>$banner-image-owner$</p>
+        </div>
+        $endif$
     </div>
 </div>
 
