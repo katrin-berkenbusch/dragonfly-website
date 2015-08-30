@@ -61,29 +61,31 @@
     }  
 }
 
+$border-width: 3px;
+
 .left-coloured-border {
-    border-left: 5px solid $wing-flash-blue;
+    border-left: $border-width solid $wing-flash-blue;
     @extend .coloured-border;
 }
 .right-coloured-border {
-    border-right: 5px solid $wing-flash-blue;
+    border-right: $border-width solid $wing-flash-blue;
     @extend .coloured-border;
 }
 .bottom-coloured-border {
-    border-bottom: 5px solid $wing-flash-blue;
+    border-bottom: $border-width solid $wing-flash-blue;
     @extend .coloured-border;
 }
 .overline {
-    border-top: 5px solid $wing-flash-blue;
+    border-top: $border-width solid $wing-flash-blue;
     @extend .coloured-border;
 }
 
 .right-then-bottom-coloured-border {
-  border-right: 5px solid;
+  border-right: $border-width solid;
   @extend .coloured-border;
   @include media($clinical) {
     border-right: none;
-    border-bottom: 5px solid;
+    border-bottom: $border-width solid;
   }
 }
 
