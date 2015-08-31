@@ -14,6 +14,14 @@
             @include span-columns(12 of 12);
         }
     }
+    .two-thirds {
+        @include span-columns(8 of 12);
+        flex-grow: 1;
+        @include media($clinical) {
+            @include span-columns(12 of 12);
+        }
+    }
+    
     .one-half {
         @include span-columns(6 of 12);
         flex-grow: 1;

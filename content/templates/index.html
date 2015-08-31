@@ -1,50 +1,12 @@
-<section>
-  <div class="post-banner-image" style="background-image: url('../resources/rear/port-napier.jpg')">
-    <div class="post-banner-overlay medium-screen"></div>
-      <div class="container">
-        <blockquote class="wide">
-          <h2>Dragonfly uses data to help government, industry, and business make effective decisions.</h2>
-          <a href="#contact">Get in touch.</a>
-        </blockquote>
-      </div>
-  </div>
-</section>
+<div class="container">
+  <h1>Dragonfly uses data to help government, industry, and business make effective decisions.</h1>
+  <div class="tile-container">
 
-<section id="work-section" class="index-section">
-  <a class="anchor" id="work"></a>
-  <div class="container">
-    $partial("templates/work-list.html")$
-    <a href="/work" class="index-link">
-      Read more about our work.
-    </a>
-  </div>
-</section>
-
-<section id="about-section" class="index-section">  
-  <a class="anchor" id="about"></a>
-  <div class="container">    
-    <section class="promo-block">
-      <div class="statement">
-        <h2> 
+    <section class="tile people half">
+      <div class="heading">
+        <h2>
           <span class="highlight">We are scientists</span> who believe in making science useful in the world.
         </h2>
-      </div>
-      <div class="explanation">
-        <p>
-          Dragonfly brings together talented specialists who have excelled in their fields. Our technical skills
-          include statistical analysis, database design and administration, data visualisation, and 
-          software development. 
-        </p>
-        <p>
-          We work on the real-world problems that
-          matter to our clients, bringing solid, reliable evidence to the conversation. 
-        </p>
-        <p>
-          Data science is all about getting to the bottom of it, and we are happy
-          to dive deep. Our approach is fluid
-          and pragmatic. We have the technical skills to pick problems apart,
-          and the creativity to find novel solutions. 
-        </p>
       </div>
       <div class="people-list">
         $for(people)$
@@ -57,47 +19,107 @@
         $endfor$
       </div>
     </section>
-  </div>
-  <div class="container">
-    <a href="/about" class="index-link">
-      Read more about our people.
-    </a>
-  </div>
-</section>
 
-<section class="index-section" id="publications-section">
-  <a id="publications" class="anchor"></a>
-  <div class="container">
-    <section class="promo-block">
-      <div class="statement">
-        <h2> 
+    <section class="tile work half" style="background-image: url('/work/2014-10-01-warp-strike/streamers.jpg');">
+      <div class="heading">
+        <h2>
+            <span class="highlight">We use statistical analysis</span> so our clients can
+            make decisions based on the best available information.
+        </h2>
+      </div>
+      <div class="footing">
+        <p class="testimonial">
+          Dragonfly consistently produced strong, defensible outputs, and delivered value for money.
+        </p>
+        <p class="testimonial-source">
+          Johanna Pierre, Manager, Marine Conservation Services, Department of Conservation
+        </p>
+      </div>
+    </section>
+
+    <section class="tile work third" style="background-image: url('/work/2015-02-10-INZ-case-study/prediction-service.png');">
+      <div class="heading">
+        <h2>
+          We <span class="highlight">built a system for data management, analysis and reporting</span> for Immigration New Zealand.
+        </h2>
+      </div>
+      <div class="footing">
+        <p class="testimonial">
+          We worked out the cost saving from this project, ... it was significant.
+        </p>
+        <p class="testimonial-source">
+          Steve Cantlon, Principal Business Adviser, Immigration New Zealand
+        </p>
+      </div>
+    </section>
+
+    <section class="tile publications third">
+      <div class="heading">
+        <h2>
           <span class="highlight">We share our findings</span> with the scientific community and the broader community.
         </h2>
       </div>
-      <div class="explanation">
-        <p>
-          As experts in our fields, we are widely published in a variety of scientific journals. We regularly present at conferences and publish papers both individually and as an organisation.
-        </p>
-      </div>
-      <div class="journal-list">
-        <div class="journal-logo" id="journal-nature">
-          <img src="../images/journal-logos/nature.png">
-        </div>
-        <div class="journal-logo" id="journal-science">
-          <img src="../images/journal-logos/science.png">
-        </div>
-        <div class="journal-logo" id="journal-plos">
-          <img src="../images/journal-logos/plos.png">
-        </div>
-        <div class="journal-logo" id="journal-peerj">
-          <img src="../images/journal-logos/peerj.png">
+      <div class="footing">
+        <div class="journal-list">
+          <div class="journal-logo" id="journal-nature">
+            <img src="../images/journal-logos/nature.png">
+          </div>
+          <div class="journal-logo" id="journal-science">
+            <img src="../images/journal-logos/science.png">
+          </div>
+          <div class="journal-logo" id="journal-plos">
+            <img src="../images/journal-logos/plos.png">
+          </div>
+          <div class="journal-logo" id="journal-peerj">
+            <img src="../images/journal-logos/peerj.png">
+          </div>
         </div>
       </div>
     </section>
-    <div class="container">
-      <a href="/publications" class="index-link">
-        Read our publications.
-      </a>
-    </div>
+
+    <section class="tile people third" style="background-image: url('/work/2015-03-02-paua-logger-case-study/dave-and-jules.jpg');">
+
+    </section>
+
+    <section class="tile work full" style="background-image: url('/work/2014-10-01-seabird-risk/bullers.jpg');">
+      <div class="heading">
+        <h2>
+          We supported <span class="highlight">evidence based policy</span> for the National Plan of Action - Seabirds.
+        </h2>
+      </div>
+      <div class="footing">
+        <p class="testimonial">
+          They fostered an open and inclusive approach with all stakeholders.
+        </p>
+        <p class="testimonial-source">
+          Bob Zuur, Marine Advocate, WWF-New Zealand
+        </p>
+      </div>
+    </section>
+
+    <section class="tile data half">
+      <div class="heading">
+        <h2>
+          We share <span class="highlight">open data</span> on seabird, marine mammal, and turtle bycatch.
+        </h2>
+      </div>
+    </section>
+
+    <section class="tile work half" style="background-image: url('/work/2015-03-25-reporting-case-study/electricity-use-and-demand.png');">
+      <div class="heading">
+          <h2>
+            We <span class="highlight">improved data science capability</span> with the sector performance team at MBIE.
+          </h2>
+      </div>
+      <div class="footing">
+        <p class="testimonial">
+          If I have another chance to work with Dragonfly I won't hesitate to say yes. No question
+        </p>
+        <p class="testimonial-source">
+          Vij Kooyela, Senior Analyst, Sector Performance Team, Ministry of Business, Innovation, & Employment
+        </p>
+      </div>
+    </section>
+
   </div>
-</section>
+</div>

@@ -1,0 +1,79 @@
+.tile-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tile {
+    margin: 0.5em;
+    flex-shrink: 1;
+    @include colour('border-color');
+    position: relative;
+    background-size: cover;
+    min-height: 500px;
+    &.half-height {
+        height: 250px;
+    }
+    &.half {
+        width: 48%;
+    }
+    &.full {
+        width: 100%;
+    }
+    &.third {
+        width: 31%;
+    }
+    .testimonial {
+        font-size: 1.2em;
+        font-style: italic;    
+    }
+    .testimonial-source {
+    }
+    .heading {
+        border-bottom: 3px solid;
+        border-color: inherit;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 0.5em;
+        h2 {       
+            color: white;
+        }
+    }
+    .footing {
+        border-top: 3px solid;
+        border-color: inherit;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(255, 255, 255, 0.6);
+        padding: 0.5em;
+    }
+    .people-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .person {
+            max-width: 125px;
+            padding: 0.5em;
+            a {
+                text-decoration: none;
+            }
+            .person-description {
+                font-size: 0.8em;
+            }
+        }
+    }
+    .journal-list {
+        @extend .one-third;
+        display: flex;
+        flex-wrap: wrap;
+        .journal-logo {
+            width: 50%;
+            padding: 1em;
+            display: inline-block;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
