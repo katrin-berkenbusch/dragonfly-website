@@ -1,13 +1,12 @@
 ---
 title: Online Delphi survey method
 short-title: Delphi survey 
-banner-image: 
+banner-image: /work/delphi-case-study/campbell-island-mollymawk.png
 summary: An online survey for gathering expert opinion anonymously.
 tags: stats, policy
 quote: In some situations, management decisions have to be made despite quite large gaps in the data. The Delphi method provides you with a basis for making those calls. 
-quote-attribution: Barry Baker
-Latitude 42 Environmental Consultants
-logo: /work/delphi-case-study/mbie-logo.png
+quote-attribution: Barry Baker, Latitude 42 Environmental Consultants
+logo: /work/delphi-case-study/doc-logo.png
 ---
 We worked with the Department of Conservation (DOC) to gather expert opinion about New Zealand albatross populations (such as age at first reproduction, number of breeding pairs and reproductive success) to inform its seabird threat framework. 
 <!--more-->
